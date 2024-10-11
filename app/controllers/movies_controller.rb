@@ -40,6 +40,7 @@ class MoviesController < ApplicationController
 
   def update
     @movie = Movie.find(params.fetch(:id))
+
     
     if @movie.update(movie_params)
       redirect_to @movie, notice: "Movie updated successfully."
